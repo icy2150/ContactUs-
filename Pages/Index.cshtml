@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    label {
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+    h1 {
+        margin-bottom: 50px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Contact Us</h1>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" asp-for="Name" required>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" asp-for="Email" required>
+    </div>
+    <div>
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes" asp-for="Notes" required></textarea>
+    </div>
+    <div>
+        <label for="attachment">Attachment:</label>
+        <input type="file" id="attachment" name="attachment" asp-for="Attachment">
+    </div>
+
+    <button type="submit" id="submit">Submit</button>
+</form>
+
+
